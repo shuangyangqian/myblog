@@ -39,3 +39,9 @@ def edit_action(request):
     article.save()
 
     return render(request, 'article_page.html', {"article": article})
+
+
+def article_delete(request, article_id):
+    models.Article.objects.filter(pk=article_id).delete()
+    articles = models.Article.objects.all()
+    return render(request, 'index.html', {"articles": articles})
