@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index page</title>
+</head>
+<body>
+    <form action="" method="get">
+        <lable>用户名
+            <input type="text" name="username" value=""/>
+        </lable>
+        <br/>
+        <lable>密码
+            <input type="password" name="password" value=""/>
+        </lable>
+        <br/>
+        <lable>邮箱
+            <input type="email" name="email" value=""/>
+        </lable>
+        <br/>
+    <input type="submit" value="注册"/>
+
+    </form>
+    <a href="{% url 'users:index_page' %}" >返回登录</a>
+</body>
+</html>
